@@ -177,7 +177,7 @@ export default class Controls {
                 // console.log("fired mobile");
 
                 // Resets
-                this.room.scale.set(0.07, 0.07, 0.07);
+                this.room.scale.set(0.7, 0.7, 0.7)
                 this.room.position.set(0, 0, 0);
                 this.rectLight.width = 0.3;
                 this.rectLight.height = 0.4;
