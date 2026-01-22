@@ -493,6 +493,60 @@ svg{
   top: 16px;
 }
 
+/* Back to Top */
+.back-to-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-text);
+  cursor: pointer;
+  margin: 60px auto;
+  transition: opacity 0.3s ease;
+}
+
+.back-to-top:hover {
+  opacity: 0.7;
+}
+
+.back-to-top-arrow {
+  transform: rotate(180deg);
+  animation: bounceUp 0.5s ease-in alternate infinite;
+}
+
+.back-to-top-arrow svg {
+  display: block;
+}
+
+@keyframes bounceUp {
+  0% {
+    transform: rotate(180deg) translateY(0);
+  }
+  100% {
+    transform: rotate(180deg) translateY(8px);
+  }
+}
+
+.back-to-top-text {
+  margin-top: 12px;
+  margin-bottom: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 968px) {
+  .back-to-top-arrow svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .back-to-top-text {
+    font-size: 12px;
+  }
+}
+
 /* Reduced Motion Preference */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -509,6 +563,10 @@ svg{
   }
 
   .arrow-svg-wrapper {
+    animation: none;
+  }
+
+  .back-to-top-arrow {
     animation: none;
   }
 }
